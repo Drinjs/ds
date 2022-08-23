@@ -1,0 +1,4 @@
+.name
+*.xml
+*.iml
+cmake-build-debug
