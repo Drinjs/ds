@@ -323,7 +323,7 @@ int main() {
     }
     cout << "当前表长： " << length(DL) << endl;
 
-    cout << "单向链表开始取反操作： " << endl;
+    cout << "双向链表开始取反操作： " << endl;
     revert(DL);
     print(DL);
 
