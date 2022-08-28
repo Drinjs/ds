@@ -3,3 +3,4 @@
 *.iml
 cmake-build-debug
 node_modules
+.idea
