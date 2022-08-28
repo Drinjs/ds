@@ -257,12 +257,10 @@ bool revert(DoubleLinkList &DL) {
     return true;
 }
 
-
 int main() {
     DoubleLinkList DL;
     isEmpty(DL);
     if (isEmpty(DL)) {
-        s
         cout << "空链表" << endl;
     } else {
         cout << "空链表" << endl;

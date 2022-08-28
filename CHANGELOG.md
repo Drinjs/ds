@@ -1,4 +1,4 @@
-# 0.2.0 (2022-08-28)
+# [0.2.0](https://github.com/Drinjs/ds/compare/15dca5e...v0.2.0) (2022-08-28)
 
 ### ✨ Features | 新功能
 
