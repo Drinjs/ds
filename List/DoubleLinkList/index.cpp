@@ -13,10 +13,7 @@ typedef struct DoubleLinkNode {
 } DoubleLinkNode, *DoubleLinkList;
 
 bool isEmpty(DoubleLinkList &DL) {
-    if (DL->next == NULL) {
-        return true;
-    }
-    return false;
+    return (DL->next == nullptr);
 }
 
 bool initLinkList(DoubleLinkList &DL) {
@@ -263,7 +260,7 @@ int main() {
     if (isEmpty(DL)) {
         cout << "空链表" << endl;
     } else {
-        cout << "空链表" << endl;
+        cout << "非空链表" << endl;
     }
     initLinkList(DL);
     List_TailInsert(DL);
