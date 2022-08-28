@@ -1,3 +1,9 @@
+# [0.3.0](https://github.com/Drinjs/ds/compare/v0.2.0...v0.3.0) (2022-08-28)
+
+### ✨ Features | 新功能
+
+* 新增单向循环链表（无头节点） ([925d694](https://github.com/Drinjs/ds/commit/925d694))
+
 # [0.2.0](https://github.com/Drinjs/ds/compare/15dca5e...v0.2.0) (2022-08-28)
 
 ### ✨ Features | 新功能
