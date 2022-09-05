@@ -8,15 +8,16 @@
 using namespace std;
 
 bool isEmpty(SqQueue SQ) {
-    return (SQ.front == SQ.rear);
+    return (SQ.front == SQ.rear && SQ.tag == -1);
 }
 
 bool isFull(SqQueue SQ) {
-    return ((SQ.rear + 1) % MaxSize == SQ.front);
+    return (SQ.rear == SQ.front && SQ.tag == 1);
 }
 
 bool initQueue(SqQueue &queue) {
     queue.front = queue.rear = 0;
+    queue.tag = -1;
 }
 
 bool push(SqQueue &queue, int data) {
@@ -25,6 +26,7 @@ bool push(SqQueue &queue, int data) {
     }
     queue.data[queue.rear++] = data;
     queue.rear %= MaxSize;
+    queue.tag = 1;
     return true;
 }
 
@@ -35,6 +37,7 @@ bool pop(SqQueue &queue, int &data) {
 
     data = queue.data[queue.front++];
     queue.front %= MaxSize;
+    queue.tag = -1;
     return true;
 }
 
@@ -44,6 +47,13 @@ bool getFront(SqQueue queue, int &data) {
     }
     data = queue.data[queue.front];
     return true;
+}
+
+int length(SqQueue queue) {
+    if (isFull(queue)) {
+        return MaxSize;
+    }
+    return (queue.rear + MaxSize - queue.front) % MaxSize;
 }
 
 int main() {
@@ -65,6 +75,7 @@ int main() {
         cout << "满队列无法入队！" << endl;
     }
 
+    cout << "队列长度为：" << length(queue) << endl;
     int popData = -1;
     cout << "出来吧你， ";
     while (!isEmpty(queue)) {
